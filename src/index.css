@@ -11,7 +11,7 @@
 	--color-flying: #3dc7ef;
 	--color-ghost: #4d5b64;
 	--color-normal: #a4acaf;
-	--color-poison: #7e0058;
+	--color-poison: #b35295;
 	--color-rock: #a38c21;
 	--color-fighting: #d56723;
 	--color-dark: #707070;
@@ -61,7 +61,7 @@ header {
 header form {
 	display: flex;
 	align-items: center;
-
+	flex-wrap: wrap;
 	gap: 15px;
 }
 
@@ -69,7 +69,7 @@ header form {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-
+	width: 70%;
 	border: 1px solid #555;
 	padding: 15px 20px;
 	border-radius: 25px;
@@ -163,7 +163,10 @@ header form {
 
 .card-pokemon .front{
 	transform: perspective(500px) rotateY(0deg);
+	background-size: cover;
+	background-position: center;
 }
+
 
 .card-pokemon .back{
 	background: url(./assets/img/pokeatras.png);
@@ -199,7 +202,7 @@ header form {
 	.card-pokemon {
 		width: 300px;
 		height: 430px;
-  } 
+	} 
 }
 
 .card-img {
@@ -208,7 +211,7 @@ header form {
 	justify-content: center;
 	border-radius: 5px;
 	height: 35%;
-
+	
 }
 
 .card-img img {
@@ -281,132 +284,226 @@ header form {
 }
 
 /* Types of Pokemon */
-.water {
+
+
+
+.card-pokemon.water .front{
+	background: url(./assets/img/pokecarta.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-water);
+	border-radius: 20px;
+}
+
+.card-types .water{
 	background-color: var(--color-water);
 }
 
-.card-pokemon.water{
-	background: url(./assets/img/pokecarta.png);
-
-	background-size: cover;
-}
-
-.card-pokemon.fire{
+.card-pokemon.fire .front{
 	background: url(./assets/img/fuego.png);
 	background-size: cover;
+	background-color: var(--color-fire);
+	border-radius: 20px;
 }
 
 
-.grass {
-	background-color: var(--color-grass);
-}
-
-.card-pokemon.grass{
-	background: url(./assets/img/planta.png);
-	background-size: cover;
-}
-
-.card-pokemon.bug{
-	background: url(./assets/img/planta.png);
-	background-size: cover;
-}
-
-.poison {
-	background-color: var(--color-poison);
-}
-
-.fire {
+.card-types .fire{
 	background-color: var(--color-fire);
 }
 
-.bug {
+
+.card-pokemon.grass .front{
+	background: url(./assets/img/planta.png);
+	background-size: cover;
+	background-color: var(--color-grass);
+	border-radius: 20px;
+}
+
+.card-types .grass{
+	background-color: var(--color-grass);
+}
+
+.card-pokemon.bug .front{
+	background: url(./assets/img/planta.png);
+	background-size: cover;
+	background-color: var(--color-bug);
+	border-radius: 20px;
+}
+
+.card-types .bug{
 	background-color: var(--color-bug);
 }
 
-.dragon {
+.card-pokemon.poison .front{
+	background: url(./assets/img/fantasma.png);
+	background-size: cover;
+	background-color: var(--color-poison);
+	border-radius: 20px;
+}
+
+.card-types .poison {
+	background-color: var(--color-poison);
+}
+
+.card-pokemon.dragon .front{
+	background: url(./assets/img/volador.png);
+	background-size: cover;
+	background-color: var(--color-bug);
+	border-radius: 20px;
+}
+
+.card-types .dragon {
 	background: var(--color-dragon);
 }
 
-.flying {
+.card-pokemon.flying .front{
+	background: url(./assets/img/volador.png);
+	background-size: cover;
+	background-color: var(--color-bug);
+	border-radius: 20px;
+}
+
+.card-types .flying {
 	background-color: var(--color-flying);
 }
 
-.card-pokemon.normal{
+.card-pokemon.normal .front{
 	background: url(./assets/img/volador.png);
 	background-size: cover;
+	background-color: var(--color-normal);
+	border-radius: 20px;
 }
 
-.card-pokemon.steel{
-	background: url(./assets/img/volador.png);
-	background-size: cover;
-}
-
-.ground {
-	background-color: var(--color-ground);
-}
-
-.card-pokemon.ground{
-	background: url(./assets/img/tierra.png);
-	background-size: cover;
-}
-
-.steel {
-	background-color: var(--color-steel);
-}
-
-.psychic {
-	background-color: var(--color-psychic);
-}
-
-.ice {
-	background-color: var(--color-ice);
-}
-
-.ghost {
-	background-color: var(--color-ghost);
-}
-
-.card-pokemon.ghost{
-	background: url(./assets/img/fantasma.png);
-	background-size: cover;
-}
-
-.card-pokemon.fairy{
-	background: url(./assets/img/fantasma.png);
-	background-size: cover;
-}
-
-.card-pokemon.poison{
-	background: url(./assets/img/fantasma.png);
-	background-size: cover;
-}
-
-.normal {
+.card-types .normal {
 	background-color: var(--color-normal);
 }
 
-.rock {
-	background-color: var(--color-rock);
-}
 
-.electric {
-	background-color: var(--color-electric);
-}
 
-.card-pokemon.electric{
-	background: url(./assets/img/electrico.png);
+.card-pokemon.steel .front{
+	background: url(./assets/img/metal.png);
 	background-size: cover;
+	background-size: cover;
+	background-color: var(--color-steel);
+	border-radius: 20px;
 }
 
-.fighting {
-	background-color: var(--color-fighting);
+.card-types .steel {
+	background-color: var(--color-steel);
 }
 
-.fairy {
+
+.card-pokemon.ground .front{
+	background: url(./assets/img/tierra.png);
+	background-size: cover;
+	background-size: cover;
+	background-color: var(--color-ground);
+	border-radius: 20px;
+}
+
+
+.card-types .ground {
+	background-color: var(--color-ground);
+}
+
+
+.card-pokemon.psychic .front{
+	background: url(./assets/img/fantasma.png);
+	background-size: cover;
+	background-size: cover;
+	background-color: var(--color-psychic);
+	border-radius: 20px;
+}
+
+
+.card-types .psychic {
+	background-color: var(--color-psychic);
+}
+
+.card-pokemon.ice .front{
+	background: url(./assets/img/pokecarta.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-ice);
+	border-radius: 20px;
+}
+
+
+.card-types .ice {
+	background-color: var(--color-ice);
+}
+
+.card-pokemon.ghost .front{
+	background: url(./assets/img/fantasma.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-ghost);
+	border-radius: 20px;
+}
+
+.card-types .ghost {
+	background-color: var(--color-ghost);
+}
+
+
+
+.card-pokemon.fairy .front{
+	background: url(./assets/img/fantasma.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-fairy);
+	border-radius: 20px;
+}
+
+.card-types .fairy {
 	background-color: var(--color-fairy);
 }
 
-.dark {
+.card-pokemon.rock .front{
+	background: url(./assets/img/fuego.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-rock);
+	border-radius: 20px;
+}
+
+.card-types .rock {
+	background-color: var(--color-rock);
+}
+
+.card-pokemon.electric .front{
+	background: url(./assets/img/electrico.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-electric);
+	border-radius: 20px;
+}
+
+.card-types .electric {
+	background-color: var(--color-electric);
+}
+
+.card-pokemon.fighting .front{
+	background: url(./assets/img/tierra.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-fighting);
+	border-radius: 20px;
+}
+
+.card-types .fighting {
+	background-color: var(--color-fighting);
+}
+
+.card-pokemon.dark .front{
+	background: url(./assets/img/oscuro.png);
+	background-size: cover;
+	background-position: center;
+	background-color: var(--color-dark);
+	border-radius: 20px;
+}
+
+.card-types .dark {
 	background-color: var(--color-dark);
 }
 
@@ -414,7 +511,7 @@ header form {
 .container-filters {
 	display: flex;
 	justify-content: center;
-
+	z-index: 100;
 	position: fixed;
 	top: 0;
 	left: -300px;
@@ -584,14 +681,20 @@ Styles of Pokemon Single Page
 .container-btn-load-more{
 	display: flex;
 	justify-content: center;
-
+	align-items: center;
+	margin: 0 auto;
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
 
 .btn-load-more{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 	border: none;
 	padding: 15px 40px;
+	margin-bottom: 20px;
 	font-family: inherit;
 	background-color: var(--color-primary);
 	color: #fff;
@@ -602,4 +705,72 @@ Styles of Pokemon Single Page
 .btn-load-more:hover{
 	background-color: var(--color-primary-hover);
 	color: #000;
+}
+
+
+
+/* pagina oak */
+
+.paginaoak{
+	background: rgb(62,137,130);
+background: linear-gradient(360deg, rgba(62,137,130,1) 0%, rgba(81,148,139,1) 5%, rgba(80,145,137,1) 10%, rgba(105,162,155,1) 16%, rgba(130,177,171,1) 20%, rgba(158,195,188,1) 24%, rgba(158,195,188,1) 26%, rgba(188,215,208,1) 32%, rgba(206,227,222,1) 38%, rgba(228,243,240,1) 51%, rgba(229,244,241,1) 81%, rgba(228,243,238,1) 84%, rgba(228,243,238,1) 100%);
+height: 100vh;
+}
+
+
+
+.cuadro-texto{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 20px;
+	background-color: #FDFBFE;
+	border-radius: 20px;
+	border: 10px solid #8ABCD5;
+	height: 150px;
+	width: 90%;
+	margin: 80px auto;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 30px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+	color: #3b3b3b;
+}
+
+.profesor{
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+.profesor img{
+	width: 13%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.profesor img{
+		width: 25%;
+	}
+
+  }
+
+@media (max-width: 767px) { 
+	.profesor img{
+		width: 40%;
+	}
+
+	.cuadro-texto{
+		height: 255px;
+		margin: 60px auto;
+	}
+	
+}
+
+
+.botonoak img{
+	width: 50px;
+}
+
+.botonoak button{
+	outline: none;
+	border: none;
 }
