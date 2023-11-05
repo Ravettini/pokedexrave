@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import profesor from '../assets/img/Profesor_Oak_LGPE.png'
+import { useNavigate } from 'react-router-dom';
+import profesor from '../assets/img/Profesor_Oak_LGPE.png';
 import sound from '../assets/sounds/sonidito.mp3';
 import sound2 from '../assets/sounds/cancionOak.mp3';
-import silly from '../assets/img/silly.png'
+import silly from '../assets/img/silly.png';
 
 const Heropage = () => {
+  const navigate = useNavigate();
   const audioRef = useRef(null);
-1
   const textos = [
     'Hola, ¡bienvenido al mundo Pokémon!.',
     'Mi nombre es Oak, pero la gente me llama profesor Pokémon.',
@@ -20,6 +21,7 @@ const Heropage = () => {
   const [indiceTexto, setIndiceTexto] = useState(0);
   const [textoMostrado, setTextoMostrado] = useState('');
   const [caracterActual, setCaracterActual] = useState(0);
+  const [redirectToHomePage, setRedirectToHomePage] = useState(false);
 
   useEffect(() => {
     if (indiceTexto < textos.length) {
@@ -40,9 +42,13 @@ const Heropage = () => {
       setTextoMostrado('');
       audioRef.current.play();
     } else {
-      window.location.href = '/HomePage';
+      setRedirectToHomePage(true);
     }
   };
+
+  if (redirectToHomePage) {
+    navigate('/HomePage');
+  }
 
   return (
     <div className='paginaoak'>
@@ -51,10 +57,10 @@ const Heropage = () => {
         <img src={profesor} alt="" />
       </div>
       <div className="cuadro-texto">
-      {textoMostrado} 
-      <button className='botonoak' onClick={handleClick}>
-        <img src={silly} alt="" />
-      </button>
+        {textoMostrado}
+        <button className='botonoak' onClick={handleClick}>
+          <img src={silly} alt="" />
+        </button>
       </div>
       <audio ref={audioRef} src={sound} />
     </div>

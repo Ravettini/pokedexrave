@@ -22,7 +22,7 @@ export const Navigation = () => {
 return (
     <div>
         <header className='container'>
-				<Link to='/' className='logo'>
+				<Link to='/HomePage' className='logo'>
 					<img
 						src='https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png'
 						alt='Logo Pokedex'
