@@ -750,7 +750,8 @@ height: 100vh;
 
 	.cuadro-texto{
 		height: 200px;
-		margin: 60px auto;
+		margin: 0px auto;
+		margin-bottom: 80px;
 	}
 	
 }
