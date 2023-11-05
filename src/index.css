@@ -93,11 +93,11 @@ header form {
 .btn-search {
 	border: none;
 	outline: none;
-	border-radius: 25px;
+	border-radius: 10px;
 	padding: 15px 30px;
 	font-family: inherit;
 	color: #fff;
-	background-color: var(--color-primary);
+	background-color: var(--color-steel);
 	cursor: pointer;
 	font-weight: 500;
 	letter-spacing: 2px;
@@ -552,7 +552,7 @@ header form {
 	cursor: pointer;
 }
 /*======================================= 
-Styles of Pokemon Single Page
+estilos individual
 ======================================= 
 */
 
@@ -623,6 +623,14 @@ Styles of Pokemon Single Page
 	flex-direction: column;
 	flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+	
+.container-stats {
+	margin-bottom: 30px;
+}
+
+  }
 
 .stats {
 	display: flex;
